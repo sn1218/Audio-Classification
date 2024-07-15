@@ -3,7 +3,7 @@
 
 My task for this project was to classify a song's genre using its audio data. My aim was to get a higher accuracy than if I were to guess the genre at random; if the number of genres was 10, then the target metric to beat was 10%.
 
-This project was inspired by Spotify. I thought Spotify must classify their music somehow, and I doubted anyone manually went through each song to classify them. 
+This project was inspired by Spotify. 
 
 
 ## The Project
