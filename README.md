@@ -1,16 +1,16 @@
 # Audio Classification
 ## The Scenario
 
-I was inspired by Spotify. I thought Spotify must classify their music somehow, and I doubted anyone manually went through each song to classify them. 
-
 My task for this project was to classify a song's genre using its audio data. My aim was to get a higher accuracy than if I were to guess the genre at random; if the number of genres was 10, then the target metric to beat was 10%.
+
+This project was inspired by thoughts on how Spotify classifies their music. 
 
 
 ## The Project
 
 The tools used in this project include: Python and Python libraries (pandas, numpy, matplotlib, librosa, tensorflow).
 
-Audio data was sourced from the GTZAN dataset on Kaggle. Files that would not load properly were dropped, and exploratory data analysis was performed in 'Audio_Data_EDA.ipynb'. 
+Audio data was sourced from the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) on Kaggle. Files that would not load properly were dropped, and exploratory data analysis was performed in 'Audio_Data_EDA.ipynb'. 
 
 'Classification_of_Audio_Data_using_Machine_Learning.ipynb' contains all the steps taken to produce the Convolutional Neural Network (CNN) model to classify audio into music genres. 
 
