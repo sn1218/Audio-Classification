@@ -10,7 +10,7 @@ This project was inspired by thoughts on how Spotify classifies their music.
 
 The tools used in this project include: Python and Python libraries (pandas, numpy, matplotlib, librosa, tensorflow).
 
-Audio data was sourced from the [GTZAN dataset on Kaggle](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification). Files that would not load properly were dropped, and exploratory data analysis was performed in 'Audio_Data_EDA.ipynb'. 
+Audio data was sourced from the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) on Kaggle. Files that would not load properly were dropped, and exploratory data analysis was performed in 'Audio_Data_EDA.ipynb'. 
 
 'Classification_of_Audio_Data_using_Machine_Learning.ipynb' contains all the steps taken to produce the Convolutional Neural Network (CNN) model to classify audio into music genres. 
 
