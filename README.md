@@ -1,20 +1,33 @@
 # Audio Classification
-## The Scenario
+## Overview
 
-My task for this project was to classify a song's genre using its audio data. My aim was to get a higher accuracy than if I were to guess the genre at random; if the number of genres was 10, then the target metric to beat was 10%.
-
-This project was inspired by thoughts on how Spotify classifies their music. 
+This project classifies songs into their respective genres using audio data, inspired by how platforms like Spotify categorise music. By leveraging a Convolutional Neural Network (CNN) model, the goal was to achieve a classification accuracy higher than random guessing (10% for 10 genres). The project uses the GTZAN dataset, and key tools include Python libraries like librosa for audio feature extraction and tensorflow for building the CNN model.
 
 
 ## The Project
 
 The tools used in this project include: Python and Python libraries (pandas, numpy, matplotlib, librosa, tensorflow).
 
-Audio data was sourced from the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification) on Kaggle. Files that would not load properly were dropped, and exploratory data analysis was performed in 'Audio_Data_EDA.ipynb'. 
+### Dataset
+The project uses the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification), which contains 1,000 audio files, each 30 seconds long, classified into 10 genres: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, and rock.
 
-'Classification_of_Audio_Data_using_Machine_Learning.ipynb' contains all the steps taken to produce the Convolutional Neural Network (CNN) model to classify audio into music genres. 
-The final model was saved as 'cnn_model.h5'; its history is saved as 'history.pkl'. The label encoding is saved as 'classes.npy'. 
+#### Data Preprocessing
+* Files that were corrupted or failed to load properly were removed.
+* Mel spectrograms were extracted using librosa, and features such as min, max, and mean of each row were computed for input into the CNN model.
+* Final features were used to train the CNN model.
 
-The model and associated files, as well as the module 'feature_extraction.py', are loaded in 'Test_Model_on_Youtube_Clips.ipynb'. 'feature_extraction.py' produces the features used in the CNN model, e.g. min, max, and mean of each row of the Mel Spectogram. 
+### Results
+The CNN model achieved an accuracy of 65% on the test set, significantly outperforming the random guessing baseline of 10%.
 
-The animated slide deck presentation can be found [here](https://www.canva.com/design/DAGJ_ayphRI/afFF12HA3axhxRTSc2otRA/view?utm_content=DAGJ_ayphRI&utm_campaign=designshare&utm_medium=link&utm_source=editor). The PDF'd version is included in the repository.
+The model best identifies classical music.
+
+### Key Files in the Repository
+* Audio_Data_EDA.ipynb: Performs exploratory data analysis (EDA) on the dataset.
+* Classification_of_Audio_Data_using_Machine_Learning.ipynb: Contains the steps for building and training the CNN model.
+* Test_Model_on_Youtube_Clips.ipynb: Tests the trained model on new audio samples from YouTube.
+* cnn_model.h5: The saved CNN model.
+* history.pkl: The training history of the model.
+* classes.npy: The label encoding used in the model.
+* feature_extraction.py: Module for extracting audio features for model input.
+
+You can view the animated slide deck that summarises this project [here](https://www.canva.com/design/DAGJ_ayphRI/afFF12HA3axhxRTSc2otRA/view?utm_content=DAGJ_ayphRI&utm_campaign=designshare&utm_medium=link&utm_source=editor). The presentation outlines the motivation, methodology, and results of the project. A static PDF version is also available in the repository.
