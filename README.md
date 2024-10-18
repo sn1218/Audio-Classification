@@ -8,37 +8,43 @@ This project focuses on classifying songs into their respective genres based on 
 ### Tools and Libraries
 This project was implemented in Python and utilised several key libraries, including:
 
-* pandas and numpy for data manipulation
-* matplotlib and seaborn for visualisation
-* librosa for audio processing and feature extraction
-* tensorflow for constructing and training the neural network
+* pandas and numpy: For data manipulation
+* matplotlib and seaborn: For visualising the data
+* librosa: For extracting audio features such as MFCCs, Mel spectrograms, chroma vectors, and tonnetz
+* tensorflow: For constructing and training the neural network
 
 ### Dataset
 The project uses the [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification), which contains 1,000 audio files, each 30 seconds long, classified into 10 genres: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, and rock.
 
+The data is sourced from Kaggle using the Kaggle API.
+
 #### Data Preprocessing
-To prepare the dataset for the CNN model:
+To prepare the data for training, the following steps were performed:
 
 * Data cleaning: Corrupted or unreadable files were removed to ensure a clean dataset.
-* Feature extraction: MFCCs, Mel spectrograms, chroma vectors, and tonnetz features were extracted using librosa.
-* Feature summarisation: Statistical features such as minimum, maximum, and mean values were calculated from the extracted features and used as input for the CNN model.
+* Feature extraction: Multiple audio features were extracted using librosa, including:
+  * MFCCs (Mel-frequency cepstral coefficients)
+  * Mel spectrograms
+  * Chroma vectors
+  * Tonnetz features (tonal centroid features)
+* Feature summarisation: For each extracted feature, statistics such as minimum, maximum, and mean were computed. These were used as inputs to the CNN model.
 
 ### Model Architeture 
-This CNN model is designed to classify audio tracks into genres based on features extracted from the MFCC, Mel spectogram, chroma vector, and tonnetz feature graphs. Here's an overview of the layers:
+This CNN model classifies audio tracks into genres by processing the extracted features. Here's a high-level overview of the layers:
 
-* Convolutional Layer 1: Detects basic audio features from the Mel spectrogram input.
+* Convolutional Layer 1: Detects basic audio features from the inputs.
 * Max Pooling Layer 1: Reduces the size of the feature map to retain important information and reduce complexity.
-* Dropout Layer: Helps prevent overfitting by randomly disabling a fraction of neurons during training.
+* Dropout Layer: Reduces overfitting by randomly deactivating some neurons during training.
 * Convolutional Layer 2: Learns more complex patterns from the audio data.
 * Max Pooling Layer 2: Further reduces the size of the feature map.
-* Dropout Layer: Adds further regularization to improve model generalization.
+* Dropout Layer: Adds further regularisation to improve model generalisation.
 * Convolutional Layer 3: Captures even higher-level patterns in the audio features.
 * Max Pooling Layer 3: Reduces dimensionality before flattening.
 * Dropout Layer: Another layer to prevent overfitting.
 * Flatten Layer: Converts the 2D feature maps into a 1D vector to prepare for the dense (fully connected) layers.
-* Dense Layer: A fully connected layer that uses the learned patterns for classification.
-* Dropout Layer: Final regularization before the output.
-* Output Layer: Classifies the audio track into one of the 10 genre categories using a softmax function.
+* Dense Layer: A fully connected layer that learns the relationship between the patterns and genres.
+* Dropout Layer: Final regularisation before the output.
+* Output Layer: Classifies the track into one of the 10 genre categories using a softmax activation function.
 
   ![Model Architecture](https://github.com/user-attachments/assets/a5bff676-8fbe-4e7a-9c9e-d0299a0c2a6f)
 
@@ -53,7 +59,15 @@ The CNN model achieved a 65% accuracy on the test dataset, significantly outperf
 * cnn_model.h5: Pre-trained CNN model file.
 * history.pkl: Contains the model's training history.
 * classes.npy: Numpy array storing the genre label encodings used in the model.
-* feature_extraction.py: Script for extracting and processing audio features used as input for the CNN model.
+* feature_extraction.py: Script for extracting audio features for the CNN model.
 
-## Project Presentation
+### Project Presentation
 You can view the animated slide deck that summarises this project [here](https://www.canva.com/design/DAGJ_ayphRI/afFF12HA3axhxRTSc2otRA/view?utm_content=DAGJ_ayphRI&utm_campaign=designshare&utm_medium=link&utm_source=editor). The presentation outlines the motivation, methodology, and results of the project. A static PDF version is also available in the repository.
+
+## How to Use the Project
+* Clone the repository and download the following files:
+  * feature_extraction.py
+  * classes.npy
+  * cnn_model.h5
+  * Test_Model_on_Youtube_Clips.ipynb
+* Follow the steps in Test_Model_on_Youtube_Clips.ipynb to load the model and test it using audio clips from YouTube.
