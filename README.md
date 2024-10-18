@@ -1,4 +1,4 @@
-# Audio Classification
+# Audio Classification using a Convolution Neural Network
 ## Overview
 
 This project focuses on classifying songs into their respective genres based on audio data, drawing inspiration from platforms like Spotify that categorise music. Using a Convolutional Neural Network (CNN) model, the primary objective was to surpass the accuracy of random guessing (10% for 10 genres). The project leverages the widely-used [GTZAN dataset](https://www.kaggle.com/datasets/andradaolteanu/gtzan-dataset-music-genre-classification), with core tools including Python libraries like librosa for audio feature extraction and tensorflow for building and training the CNN model.
