@@ -40,7 +40,8 @@ This CNN model is designed to classify audio tracks into genres based on feature
 * Dropout Layer: Final regularization before the output.
 * Output Layer: Classifies the audio track into one of the 10 genre categories using a softmax function.
 
-  
+  ![Model Architecture](https://github.com/user-attachments/assets/a5bff676-8fbe-4e7a-9c9e-d0299a0c2a6f)
+
 
 ### Results
 The CNN model achieved a 65% accuracy on the test dataset, significantly outperforming the random guessing baseline of 10%. The model performed particularly well in identifying classical music, which may be attributed to the distinct characteristics of this genre.
