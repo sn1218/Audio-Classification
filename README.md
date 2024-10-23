@@ -52,7 +52,7 @@ This CNN model classifies audio tracks into genres by processing the extracted f
 ### Results
 The CNN model achieved a 65% accuracy on the test dataset, significantly outperforming the random guessing baseline of 10%. The model performed particularly well in identifying classical music, which may be attributed to the distinct characteristics of this genre.
 
-### Repository Structure
+## Repository Structure
 * Audio_Data_EDA.ipynb: Jupyter notebook for Exploratory Data Analysis (EDA) of the GTZAN dataset.
 * Classification_of_Audio_Data_using_Machine_Learning.ipynb: Main notebook detailing the CNN model development, training, and evaluation process.
 * Test_Model_on_Youtube_Clips.ipynb: Notebook for testing the trained model on new audio samples sourced from YouTube.
