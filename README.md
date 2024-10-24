@@ -53,13 +53,13 @@ This CNN model classifies audio tracks into genres by processing the extracted f
 The CNN model achieved a 65% accuracy on the test dataset, significantly outperforming the random guessing baseline of 10%. The model performed particularly well in identifying classical music, which may be attributed to the distinct characteristics of this genre.
 
 ## Repository Structure
-* Audio_Data_EDA.ipynb: Jupyter notebook for Exploratory Data Analysis (EDA) of the GTZAN dataset.
-* Classification_of_Audio_Data_using_Machine_Learning.ipynb: Main notebook detailing the CNN model development, training, and evaluation process.
-* Test_Model_on_Youtube_Clips.ipynb: Notebook for testing the trained model on new audio samples sourced from YouTube.
-* cnn_model.h5: Pre-trained CNN model file.
-* history.pkl: Contains the model's training history.
-* classes.npy: Numpy array storing the genre label encodings used in the model.
-* feature_extraction.py: Script for extracting audio features for the CNN model.
+* **Audio_Data_EDA.ipynb:** Jupyter notebook for Exploratory Data Analysis (EDA) of the GTZAN dataset.
+* **Classification_of_Audio_Data_using_Machine_Learning.ipynb:** Main notebook detailing the CNN model development, training, and evaluation process.
+* **Test_Model_on_Youtube_Clips.ipynb:** Notebook for testing the trained model on new audio samples sourced from YouTube.
+* **cnn_model.h5:** Pre-trained CNN model file.
+* **history.pkl:** Contains the model's training history.
+* **classes.npy:** Numpy array storing the genre label encodings used in the model.
+* **feature_extraction.py:** Script for extracting audio features for the CNN model.
 
 ### Project Presentation
 You can view the animated slide deck that summarises this project [here](https://www.canva.com/design/DAGJ_ayphRI/afFF12HA3axhxRTSc2otRA/view?utm_content=DAGJ_ayphRI&utm_campaign=designshare&utm_medium=link&utm_source=editor). The presentation outlines the motivation, methodology, and results of the project. A static PDF version is also available in the repository.
